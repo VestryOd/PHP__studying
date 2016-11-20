@@ -16,3 +16,9 @@ function sql_query($sql) {
 	}
 	return $ret;
 }
+
+function sql_exec($sql) {
+	
+	sql_connect();
+	mysql_query($sql) or die(mysql_error());
+}
